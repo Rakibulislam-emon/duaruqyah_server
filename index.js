@@ -15,7 +15,7 @@ app.use(express.json());
 const getDatabase = async () => {
   try {
     return await open({
-      filename: path.resolve(__dirname, "dua_main.sqlite"), // Adjust to your SQLite file location
+      filename: path.resolve(__dirname, "dua_main.sqlite"), 
       driver: sqlite3.Database,
     });
   } catch (error) {
