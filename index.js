@@ -92,8 +92,5 @@ app.get("/", (req, res) => {
   res.json({ message: "WELCOME TO THE SERVER" });
 });
 
-// Start server
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+// Export the Express app for Vercel's serverless functions
+module.exports = app;
